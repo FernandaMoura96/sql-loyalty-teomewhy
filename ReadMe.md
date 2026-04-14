@@ -21,24 +21,6 @@ Trata-se de um dataset real extraído do sistema de pontos da comunidade Téo Me
 
 ---
 
-## 🗂️ Estrutura do Repositório
-
-```
-📂 sql-teomewhy/
-├── 📂 01_selects_basicos/
-│   └── consultas simples com SELECT e WHERE
-├── 📂 02_agregacoes/
-│   └── GROUP BY, ORDER BY, HAVING, SUM, COUNT
-├── 📂 03_case_when/
-│   └── colunas condicionais e classificações
-├── 📂 04_joins/
-│   └── cruzamento entre tabelas
-├── 📂 05_subqueries/
-│   └── subconsultas e filtros avançados
-├── 📂 06_window_functions/
-│   └── funções de janela (ROW_NUMBER, RANK, etc.)
-└── README.md
-```
 
 ---
 
