@@ -1,0 +1,23 @@
+--Quantos pontos foram ganhos em Julho
+SELECT sum(qtdePontos) AS 'PONTOS JULHO'
+
+FROM transacoes 
+
+WHERE DtCriacao >= '2025-07-01'
+AND DtCriacao   < '2025-08-01'
+AND qtdePontos  >0
+
+-- Identificando transações para verificar qtdePontos negativas e positivas dentro do mês 07/25 ordenando de forma crescente.
+
+SELECT IdTransacao,
+        qtdePontos,
+       
+    CASE 
+            WHEN QtdePontos > 0 THEN QtdePontos
+       END AS 'QtdePontos2'
+FROM transacoes 
+
+WHERE DtCriacao >= '2025-07-01'
+AND DtCriacao   < '2025-08-01'
+
+ORDER BY QtdePontos 
