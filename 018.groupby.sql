@@ -1,13 +1,6 @@
---SELECT IdProduto,
---    COUNT(*)
-
---FROM transacao_produto
-
---GROUP BY IdProduto
-
-SELECT  
+SELECT   
     IdCliente,
-    SUM(QtdePontos) AS Soma_pontos,
+    SUM(QtdePontos) AS soma_pontos,
     count(IdTransacao) AS qtdeTrasacao
 
 FROM 
@@ -18,12 +11,10 @@ WHERE
 AND DtCriacao < '2025-08-01'
 
 GROUP BY IdCliente
+HAVING soma_pontos >= 4000
 
 ORDER BY Soma_pontos Desc
 
 LIMIT 10
 
 
--- Aqui separamos os clientes de acordo a quantidade de pontos
--- identificamos a quantidade de transações para premiar os clientes 
--- de acordo com esses critérios, e identicar o perfil de transação de cada um deles.
